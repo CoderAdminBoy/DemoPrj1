@@ -8,5 +8,5 @@ Scenario Outline: Verify Compose Functionality in Gmail
 	Then User Compose Email and Attach Excel file
 	
 	Examples:
-	|	URL	| BrowserName	|	BrowserVersion	|
-	|	UAT	|	Chrome		|	Version 89		|
+	|	URL		| BrowserName	|	BrowserVersion	|
+	|	Gmail	|	Chrome		|	Version 89		|

@@ -33,6 +33,7 @@ public class Compose {
 		Thread.sleep(10000);
 		driver.findElement(By.xpath("//div[text()='Compose']")).click();
 		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@aria-label='Full screen (Shift for pop-out)']")).click();
 		WebElement toEmail = driver.findElement(By.xpath("(//span[text()='To']/following::textarea)[1]"));
 		
 		WebElement subject = driver.findElement(By.xpath("//input[@placeholder='Subject']"));
