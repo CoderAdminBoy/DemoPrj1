@@ -116,7 +116,7 @@ public class FunctionUtilities {
 				getDriver = driver;
 			} else if (browser.equalsIgnoreCase("Opera")) {
 				ChromeOptions options = new ChromeOptions();
-				options.setBinary("C:\\Users\\kumar\\AppData\\Local\\Programs\\Opera GX\\72.0.3815.473\\opera.exe");
+				options.setBinary("C:\\Users\\kumar\\AppData\\Local\\Programs\\Opera\\73.0.3856.344\\opera.exe");
 				options.setPageLoadStrategy(PageLoadStrategy.NONE);
 				DesiredCapabilities capabilities = new DesiredCapabilities();
 				capabilities.setCapability(ChromeOptions.CAPABILITY, options);

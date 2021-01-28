@@ -60,28 +60,31 @@ public class Compose {
 		String browser = configProperties.getDriver();
 		if(browser.equalsIgnoreCase("Chrome") || browser.equalsIgnoreCase("Opera") || browser.equalsIgnoreCase("edge")) {
 			Thread.sleep(2000);
-			Reporter.addStepLog("Clicked on Attach File Icon");
+			Reporter.addStepLog("Clicked on Attach File button and upload file : Gmail_Test_Cases.xlsx");
 			File file = new File(System.getProperty("user.dir")+"/Doc/"+"/Gmail_Test_Cases.xlsx");
 			String command = System.getProperty("user.dir")+"/Doc/AutoIt/"+"\\Attach.exe "+file;
 			Thread.sleep(2000);
 			Runtime.getRuntime().exec(command);
+			Thread.sleep(4000);
 			wait = new WebDriverWait(driver,200);
 			wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath("//div[text()='Gmail_Test_Cases.xlsx']")));
 		}
 		else if(browser.equalsIgnoreCase("Firefox")) {
 			Thread.sleep(2000);
-			Reporter.addStepLog("Clicked on Attach File Icon");
+			Reporter.addStepLog("Clicked on Attach File button and upload file : Gmail_Test_Cases.xlsx");
 			File file = new File(System.getProperty("user.dir")+"/Doc/"+"/Gmail_Test_Cases.xlsx");
 			String command = System.getProperty("user.dir")+"/Doc/AutoIt/"+"\\Attach_Firefox.exe "+file;
 			Thread.sleep(2000);
 			Runtime.getRuntime().exec(command);
+			Thread.sleep(4000);
 			wait = new WebDriverWait(driver,200);
 			wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath("//div[text()='Gmail_Test_Cases.xlsx']")));
 		}
 		image=FunctionUtilities.Screenshot(driver,System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(image);
 		btnSend.click();
-		Thread.sleep(2000);
+		Reporter.addStepLog("Clicked on Send button");
+		Thread.sleep(4000);
 		image=FunctionUtilities.Screenshot(driver,System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(image);
 	}
