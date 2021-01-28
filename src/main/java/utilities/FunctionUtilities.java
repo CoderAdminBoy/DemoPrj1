@@ -1,15 +1,20 @@
 package utilities;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.MutableCapabilities;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -28,7 +33,7 @@ public class FunctionUtilities {
 	public static ConfigProperties configProperties = new ConfigProperties();
 	public static WebDriver driver;
 	public static JavascriptExecutor js = (JavascriptExecutor) driver;
-	
+	static String image;
 	public static String navigateToURL() {
 		String url = configProperties.getApplicationUrl();
 		String browser = configProperties.getDriver();
@@ -111,7 +116,7 @@ public class FunctionUtilities {
 				getDriver = driver;
 			} else if (browser.equalsIgnoreCase("Opera")) {
 				ChromeOptions options = new ChromeOptions();
-				options.setBinary("C:\\Users\\dhananjay\\AppData\\Local\\Programs\\Opera\\68.0.3618.125\\opera.exe");
+				options.setBinary("C:\\Users\\kumar\\AppData\\Local\\Programs\\Opera GX\\72.0.3815.473\\opera.exe");
 				options.setPageLoadStrategy(PageLoadStrategy.NONE);
 				DesiredCapabilities capabilities = new DesiredCapabilities();
 				capabilities.setCapability(ChromeOptions.CAPABILITY, options);
@@ -145,6 +150,21 @@ public class FunctionUtilities {
 			return getDriver;
 		}
 		return getDriver;
+	}
+	
+	public static String Screenshot(WebDriver driver,long ms) {
+		String timestamp = new SimpleDateFormat("yyyy_MM_dd__hh_mm_ss").format(new Date());
+		try {
+			TakesScreenshot ts = (TakesScreenshot) driver;
+			File source = ts.getScreenshotAs(OutputType.FILE);
+			image = System.getProperty("user.dir") + "/Reports/Screenshots/" + ms + timestamp + ".png";
+			FileUtils.copyFile(source, new File(image));
+			System.out.println("Screenshot Taken");
+			
+		}catch (Exception e) {
+			System.out.println("Exception While taking screenshot"+e.getMessage());
+		}
+		return image;
 	}
 	
 	public static WebDriver getDriver() {

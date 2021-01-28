@@ -21,7 +21,7 @@ public class ExtentReportsClass{
 
 	@BeforeTest
 	public void startReport(){
-		extent = new ExtentReports (System.getProperty("user.dir") +"/test-output/STMExtentReport.html", true);
+		extent = new ExtentReports (System.getProperty("user.dir") +"/test-output/Report.html", true);
 		extent
 		.addSystemInfo("Host Name", "Compose Functionality Testing")
 		.addSystemInfo("Environment", "Gmail")

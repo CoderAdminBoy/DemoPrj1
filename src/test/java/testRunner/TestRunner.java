@@ -17,7 +17,7 @@ import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin = {"com.cucumber.listener.ExtentCucumberFormatter:/target/cucumber-reports/report.html"},features= {"Features"},
+@CucumberOptions(plugin = {"com.cucumber.listener.ExtentCucumberFormatter:Reports/report.html"},features= {"Features"},
 monochrome = true, tags= {"@Compose"},glue= {"stepDef"})
 
 public class TestRunner {
@@ -48,5 +48,7 @@ public class TestRunner {
 	public void tearDown() {
 		testRunner.finish();
 		Reporter.loadXMLConfig("./extent-config.xml");
+		Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
+		Reporter.setSystemInfo("Time Zone", System.getProperty("user.timezone"));
 	}
 }

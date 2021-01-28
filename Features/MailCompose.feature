@@ -1,5 +1,4 @@
 #Author:kumardhananjay@outlook.in
-@ComposeMail
 Feature: Testing of Compose Function
 
 @Compose
