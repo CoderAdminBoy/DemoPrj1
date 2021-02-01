@@ -12,8 +12,8 @@ import pageObjects.LoginScreen;
 public class StepDefinitons extends FunctionUtilities{
 	
 	WebDriver driver = FunctionUtilities.getDriver();
-	LoginScreen loginScreen = new LoginScreen(driver);
-	Compose compose = new Compose(driver);
+	LoginScreen loginScreen = new LoginScreen();
+	Compose compose = new Compose();
 	
 	@Given("^User Launched Browser and Navigated to URL$")
 	public void userLaunchedBrowser() {
@@ -22,7 +22,7 @@ public class StepDefinitons extends FunctionUtilities{
 	
 	@Then("^User Login with UserName and Password$")
 	public void userLogin() throws Exception {
-		loginScreen.Login("testuser9711@gmail.com","test@12345");
+		loginScreen.verifyLogin("testuser9711@gmail.com","test@12345");
 	}
 	
 	@Then("^User Compose Email and Attach Excel file$")

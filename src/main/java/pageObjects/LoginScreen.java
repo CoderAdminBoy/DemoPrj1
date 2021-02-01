@@ -13,31 +13,27 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.cucumber.listener.Reporter;
+import com.pageObjects.GmailObjects;
 import com.relevantcodes.extentreports.LogStatus;
 
 import utilities.FunctionUtilities;
 
 public class LoginScreen extends FunctionUtilities {
-	WebDriver driver;
 	static String image;
-	public LoginScreen(WebDriver driver) {
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
-	}
-
-	public void Login(String userName, String password) throws Exception {
-		driver.findElement(By.xpath("//input[@id='identifierId']")).sendKeys(userName);
-		Reporter.addStepLog("Entered Email ID as : "+userName);
+	GmailObjects login = PageFactory.initElements(driver, GmailObjects.class);
+	
+	public void verifyLogin(String userID, String pass) throws Exception {
+		
+		login.typeUserName(userID);
+		Reporter.addStepLog("Entered Email ID as : "+userID);
+		login.clickonUserNextBtn();
 		image=FunctionUtilities.Screenshot(driver,System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(image);
-		driver.findElement(By.xpath("//div[@id='identifierNext']")).click();
-		WebElement passwordButton = driver.findElement(By.xpath("//input[@name='password']"));
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.elementToBeClickable(passwordButton));
-		passwordButton.sendKeys(password);
-		Reporter.addStepLog("Entered Password as : "+password);
+		Thread.sleep(2000);
+		login.typePassword(pass);
+		Reporter.addStepLog("Entered Password as : "+pass);
 		image=FunctionUtilities.Screenshot(driver,System.currentTimeMillis());
 		Reporter.addScreenCaptureFromPath(image);
-		driver.findElement(By.xpath("//div[@id='passwordNext']")).click();
+		login.clickonPassNextBtn();
 	}
 }

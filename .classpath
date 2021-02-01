@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
+			<attribute name="module" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
@@ -26,20 +27,20 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/kumar/Desktop/extentreports-2.41.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kumar/Desktop/lib/ant-1.7.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kumar/Desktop/lib/ant-launcher-1.7.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kumar/Desktop/lib/bsh-2.0b4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kumar/Desktop/lib/bson-3.0.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kumar/Desktop/lib/freemarker-2.3.23.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kumar/Desktop/lib/hamcrest-core-1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kumar/Desktop/lib/jcommander-1.48.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kumar/Desktop/lib/jsoup-1.8.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kumar/Desktop/lib/junit-4.10.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kumar/Desktop/lib/mongodb-driver-3.0.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kumar/Desktop/lib/mongodb-driver-core-3.0.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kumar/Desktop/lib/snakeyaml-1.15.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kumar/Desktop/lib/sqlite-jdbc-3.8.11.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kumar/Desktop/lib/testng-6.9.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kumar/Documents/GitHub/Gmail_Compose/Library/ant-1.7.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kumar/Documents/GitHub/Gmail_Compose/Library/ant-launcher-1.7.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kumar/Documents/GitHub/Gmail_Compose/Library/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kumar/Documents/GitHub/Gmail_Compose/Library/bson-3.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kumar/Documents/GitHub/Gmail_Compose/Library/extentreports-2.41.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kumar/Documents/GitHub/Gmail_Compose/Library/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kumar/Documents/GitHub/Gmail_Compose/Library/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kumar/Documents/GitHub/Gmail_Compose/Library/jcommander-1.48.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kumar/Documents/GitHub/Gmail_Compose/Library/jsoup-1.8.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kumar/Documents/GitHub/Gmail_Compose/Library/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kumar/Documents/GitHub/Gmail_Compose/Library/mongodb-driver-3.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kumar/Documents/GitHub/Gmail_Compose/Library/mongodb-driver-core-3.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kumar/Documents/GitHub/Gmail_Compose/Library/snakeyaml-1.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kumar/Documents/GitHub/Gmail_Compose/Library/sqlite-jdbc-3.8.11.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kumar/Documents/GitHub/Gmail_Compose/Library/testng-6.9.9.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
